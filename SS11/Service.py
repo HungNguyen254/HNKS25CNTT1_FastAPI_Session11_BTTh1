@@ -15,5 +15,5 @@ def create_Parking(parking : Parking_create,database : Session):
     database.refresh(new_parking)
     return new_parking
 def Show_all_parking(db:Session):
-    list_parking = Parking_respones(db)
+    list_parking = db.query(Parking_respones).all()
     return list_parking
